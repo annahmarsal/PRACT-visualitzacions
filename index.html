@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ODS 7: Energia assequible i no contaminant</title>
+  <title>ODS 7: Accés a l'energia</title>
   <style>
     :root{
       --maxw: 1100px;
@@ -21,28 +21,29 @@
     h1{margin:0 0 8px; font-size:30px; line-height:1.2;}
     .subtitle{margin:0 0 14px; color:var(--muted); font-size:16px; max-width:980px;}
     .question{margin:0 0 18px; padding:12px 14px; border:1px solid var(--border); border-radius:12px; color:#222;}
-    nav{
-      position: sticky; top:0; z-index: 10;
-      background: rgba(255,255,255,0.95);
-      border-bottom:1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    nav .navin{max-width:var(--maxw); margin:0 auto; padding:10px 16px; display:flex; gap:12px; flex-wrap:wrap;}
-    nav a{
-      text-decoration:none; color:#111; font-size:14px;
-      padding:8px 10px; border:1px solid var(--border); border-radius:999px;
-    }
-    nav a:hover{background:#f7f7f7;}
+
     section{margin:38px 0 48px;}
     h2{margin:0 0 8px; font-size:20px;}
     .lead{margin:0 0 10px; color:var(--muted); max-width:980px; line-height:1.45;}
+
     .frame{
       border:1px solid var(--border); border-radius:14px;
       overflow:hidden; background:#fff;
     }
+
     iframe{
-      width:100%; height:680px; border:0; display:block;
+      width:100%;
+      height:680px;
+      border:0;
+      display:block;
     }
+
+    /* Ajustos per tipus de visualització (opcional, però queda millor) */
+    .h-linees{height:680px;}
+    .h-auditori{height:520px;}
+    .h-mapa{height:720px;}
+    .h-donut{height:560px;}
+
     footer{
       margin-top:40px; padding-top:16px;
       border-top:1px solid var(--border); color:var(--muted); font-size:13px;
@@ -53,15 +54,6 @@
 </head>
 
 <body>
-
-<nav>
-  <div class="navin">
-    <a href="#seccio1">1. Evolució global</a>
-    <a href="#seccio2">2. Índex ODS 7 i població</a>
-    <a href="#seccio3">3. Evolució per país</a>
-    <a href="#seccio4">4. Països lluny de l’objectiu</a>
-  </div>
-</nav>
 
 <main class="wrap">
 
@@ -79,19 +71,20 @@
   </header>
 
   <!-- SECCIÓ 1 -->
-  <section id="seccio1">
+  <section>
     <h2>1) Evolució global — electricitat i cuina neta</h2>
     <p class="lead">
       Aquesta visualització mostra l’evolució anual dels dos indicadors principals de l’ODS 7 a nivell mundial.
       Permet observar el progrés agregat i la diferència de ritme entre electricitat i combustibles nets per cuinar.
     </p>
     <div class="frame">
-      <iframe src="seccio1_ods7_animada.html" loading="lazy" title="Secció 1 — Evolució global ODS7"></iframe>
+      <iframe class="h-linees" src="visuals/seccio1_ods7_animada.html" loading="lazy"
+              title="Secció 1 — Evolució global ODS7"></iframe>
     </div>
   </section>
 
   <!-- SECCIÓ 2 -->
-  <section id="seccio2">
+  <section>
     <h2>2) Què vol dir en població? — auditori i índex ODS 7</h2>
     <p class="lead">
       Per traduir percentatges a un missatge més intuïtiu, es construeix un <b>índex combinat</b>:
@@ -99,7 +92,8 @@
       El pictograma mostra la proporció de població mundial amb i sense accés “amb garanties”.
     </p>
     <div class="frame">
-      <iframe src="seccio2_auditori_mundial.html" loading="lazy" title="Secció 2 — Auditori i índex ODS7"></iframe>
+      <iframe class="h-auditori" src="visuals/seccio2_auditori_mundial.html" loading="lazy"
+              title="Secció 2 — Auditori i índex ODS7"></iframe>
     </div>
     <p class="note">
       Nota metodològica: l’índex dona el mateix pes a electricitat i cuina neta per reflectir que ambdues dimensions formen part de l’ODS 7.
@@ -107,19 +101,20 @@
   </section>
 
   <!-- SECCIÓ 3 -->
-  <section id="seccio3">
+  <section>
     <h2>3) Desigualtats territorials — evolució de l’ODS7_index segons territoris</h2>
     <p class="lead">
       El mapa permet analitzar com evoluciona l’ODS7_index per país al llarg del temps.
       És especialment útil per identificar concentracions territorials de dèficit i la persistència de desigualtats.
     </p>
     <div class="frame">
-      <iframe src="seccio3_mapa_ods7_index_animat.html" loading="lazy" title="Secció 3 — Mapa animat índex ODS7"></iframe>
+      <iframe class="h-mapa" src="visuals/seccio3_mapa_ods7_index_animat.html" loading="lazy"
+              title="Secció 3 — Mapa animat índex ODS7"></iframe>
     </div>
   </section>
 
   <!-- SECCIÓ 4 -->
-  <section id="seccio4">
+  <section>
     <h2>4) On ens deixa això?</h2>
     <p class="lead">
       A l’últim any de dades disponible, es classifiquen els països segons el seu grau d’assoliment de l’ODS 7.
@@ -127,7 +122,8 @@
       reforçant la necessitat d’accelerar el progrés abans del 2030.
     </p>
     <div class="frame">
-      <iframe src="seccio4_paisos_lluny_ods7.html" loading="lazy" title="Secció 4 — Països lluny ODS7"></iframe>
+      <iframe class="h-donut" src="visuals/seccio4_paisos_lluny_ods7.html" loading="lazy"
+              title="Secció 4 — Països lluny ODS7"></iframe>
     </div>
   </section>
 
