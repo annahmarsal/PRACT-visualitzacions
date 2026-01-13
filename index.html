@@ -19,8 +19,11 @@
     }
     .wrap{max-width:var(--maxw); margin:0 auto; padding:22px 16px 60px;}
     header{padding:14px 0 6px;}
-    h1{margin:0 0 8px; font-size:30px; line-height:1.2;}
-    .subtitle{margin:0 0 14px; color:var(--muted); font-size:16px; max-width:980px; line-height:1.55;}
+
+    h1{margin:0 0 8px; font-size:28px; line-height:1.2;}
+    .subtitle{margin:0 0 10px; color:var(--muted); font-size:16px; max-width:980px; line-height:1.55;}
+    .subtitle2{margin:0 0 14px; color:var(--muted); font-size:15px; max-width:980px; line-height:1.55;}
+
     .question{
       margin:0 0 18px;
       padding:12px 14px;
@@ -32,8 +35,7 @@
     }
 
     section{margin:38px 0 48px;}
-    h2{margin:0 0 6px; font-size:20px;}
-    .chart-subtitle{margin:0 0 10px; color:var(--muted); max-width:980px; line-height:1.45;}
+    h2{margin:0 0 8px; font-size:20px;}
     .lead{margin:0 0 12px; color:var(--muted); max-width:980px; line-height:1.6;}
 
     .narrative{
@@ -56,6 +58,7 @@
       line-height:1.6;
     }
     .narrative p:last-child{margin-bottom:0;}
+
     .insight{
       padding:10px 12px;
       border-left:4px solid #ddd;
@@ -65,19 +68,6 @@
       color:#222;
       line-height:1.6;
     }
-    .method{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:10px;
-      line-height:1.5;
-    }
-    .kpi{
-      font-size:14px;
-      color:#222;
-      margin:8px 0 0;
-      line-height:1.6;
-    }
-    .kpi b{font-weight:700;}
 
     .frame{
       border:1px solid var(--border);
@@ -94,18 +84,34 @@
     /* Alçades per visualització */
     .h-linees{height:680px;}
     .h-auditori{height:560px;}
-    .h-mapa{height:720px;}
+    .h-mapa{height:620px;}
     .h-donut{height:560px;}
-    .h-scatter{height:640px;}
+    .h-scatter{height:520px;}
+
+    /* Peu de figura (caption) */
+    .caption{
+      margin:10px 2px 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+      max-width:980px;
+    }
 
     footer{
       margin-top:40px; padding-top:16px;
       border-top:1px solid var(--border);
       color:var(--muted);
       font-size:13px;
-      line-height:1.5;
+      line-height:1.6;
     }
-    .note{font-size:13px; color:var(--muted); margin-top:10px; line-height:1.5;}
+    .note{font-size:13px; color:var(--muted); margin-top:10px; line-height:1.6;}
+
+    /* Justificació del text (millor coherència visual) */
+    .subtitle, .subtitle2, .question, .lead, .narrative p, .caption, footer, .note{
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
   </style>
 </head>
 
@@ -113,12 +119,15 @@
 <main class="wrap">
 
   <header>
-    <h1>ODS 7 — Accés universal a una energia neta, fiable i sostenible: on som a 7 anys del 2030?</h1>
+    <h1>Objectiu de Desenvolupament Sostenible 7: Garantir l’accés a una energia assequible, fiable, sostenible i moderna per a tothom</h1>
+    <p class="subtitle2">Quin és l’escenari a 7 anys d’arribar a l’horitzó 2030?</p>
+
     <p class="subtitle">
-      L’ODS 7 fixa l’objectiu d’assegurar l’accés universal a serveis energètics assequibles, fiables i moderns abans del 2030.
-      Aquesta peça integra cinc visualitzacions per entendre el progrés global, les desigualtats territorials i el paper dels factors
-      econòmics en el grau d’assoliment actual.
+      Aquesta peça integra cinc visualitzacions per entendre (1) l’evolució global de l’accés a l’energia,
+      (2) què implica en termes d’assoliment “amb garanties”, (3) on es concentra el dèficit al llarg del temps,
+      (4) la magnitud del repte pendent i (5) la relació amb el desenvolupament econòmic.
     </p>
+
     <p class="question">
       <b>Pregunta central:</b> Quin és el nivell d’assoliment actual de l’ODS 7 (accés a l’electricitat i a combustibles i tecnologies netes i segures per cuinar)
       i quines diferències territorials i estructurals expliquen el retard respecte a la fita 2030?
@@ -127,177 +136,157 @@
 
   <!-- SECCIÓ 1 -->
   <section>
-    <h2>Evolució global</h2>
-    <p class="chart-subtitle">
-      Accés mundial a l’electricitat i a combustibles i tecnologies netes i segures per cuinar (1998–2023)
-    </p>
+    <h2>1) Evolució global</h2>
     <p class="lead">
-      Comencem pel panorama agregat: la sèrie temporal permet comparar l’evolució dels dos indicadors i veure si el progrés avança
-      al ritme necessari per arribar al 100% el 2030.
+      Comencem pel panorama agregat. Aquesta sèrie temporal permet comparar el progrés mundial en els dos indicadors principals:
+      l’accés a l’electricitat i l’accés a combustibles i tecnologies netes i segures per cuinar.
     </p>
 
     <div class="narrative">
       <h3>Lectura</h3>
       <p>
-        L’accés a l’electricitat mostra una tendència clarament ascendent i s’acosta progressivament a la cobertura universal.
-        En canvi, l’accés a combustibles i tecnologies netes i segures per cuinar creix més lentament i es manté notablement per sota.
+        L’accés a l’electricitat mostra una trajectòria clara d’augment i s’apropa progressivament a la cobertura universal.
+        En canvi, l’accés a combustibles i tecnologies netes i segures per cuinar avança a un ritme més lent i es manté per sota.
       </p>
       <p class="insight">
-        <b>Idea clau:</b> la bretxa entre electricitat i cuina amb solucions netes i segures indica que l’ODS 7 no es pot interpretar
-        com “quasi resolt” només perquè l’electrificació sigui elevada; el component de cuina segura i neta és el principal fre del progrés global.
+        <b>Idea clau:</b> l’ODS 7 no es pot considerar “gairebé assolit” només mirant l’electrificació. El principal coll d’ampolla
+        és la dimensió de cuina amb solucions netes i segures.
       </p>
     </div>
 
     <div class="frame">
       <iframe class="h-linees" src="visuals/seccio1_ods7_animada.html" loading="lazy"
-              title="Secció 1 — Evolució global ODS 7"></iframe>
+              title="Secció 1 — Evolució global: electricitat i cuina (combustibles/tecnologies netes i segures)"></iframe>
     </div>
+    <p class="caption">
+      Accés mundial a l’electricitat i a combustibles i tecnologies netes i segures per cuinar (1998–2023).
+    </p>
   </section>
 
   <!-- SECCIÓ 2 -->
   <section>
-    <h2>Què vol dir “accés universal” avui? (mostra de 100)</h2>
-    <p class="chart-subtitle">
-      Índex combinat ODS 7 sobre 100 icones: representació proporcional de l’accés “amb garanties” l’any 2023
-    </p>
+    <h2>2) Què vol dir “accés amb garanties”?</h2>
     <p class="lead">
-      Per sintetitzar les dues dimensions en un únic indicador, es construeix un índex ad-hoc per a la pràctica:
-      <b>ODS7_index = (electricitat + combustibles/tecnologies netes i segures per cuinar)/2</b>.
-      El pictograma tradueix aquest percentatge en una imatge fàcil d’interpretar.
+      Per fer més intuïtiva la lectura, aquí es presenta l’<b>Índex ODS 7 (%)</b>, un indicador sintètic definit per a aquesta pràctica
+      que combina el nivell d’accés a l’electricitat i l’accés a combustibles i tecnologies netes i segures per cuinar.
     </p>
 
     <div class="narrative">
       <h3>Lectura</h3>
       <p>
-        Aquesta visualització <b>no</b> mostra el nombre real de persones, sinó una <b>representació proporcional</b> en una mostra de
-        <b>100 icones</b> que simbolitzen la població mundial. En <b>groc</b> s’hi representa la proporció amb accés “amb garanties”
-        segons l’índex; en <b>negre</b>, la proporció sense accés garantit (la bretxa fins al 100%).
-      </p>
-      <p class="kpi">
-        <b>Any 2023:</b> Electricitat <b>91.6%</b> · Combustibles/tecnologies netes i segures per cuinar <b>74.1%</b> ·
-        <b>ODS7_index 82.9%</b> (≈ <b>83</b> de 100 icones amb accés “integral” segons la definició de l’índex).
+        El pictograma <b>no</b> representa el nombre real de persones, sinó una <b>mostra simbòlica de 100 icones</b> que ajuda a visualitzar
+        la proporció d’assoliment global de l’<b>Índex ODS 7 (%)</b>.
       </p>
       <p class="insight">
-        <b>Idea clau:</b> l’índex fa visible que, fins i tot amb una electrificació alta, el dèficit en cuina amb solucions netes i segures
-        manté una bretxa rellevant respecte a l’objectiu d’accés universal.
-      </p>
-      <p class="method">
-        <b>Nota metodològica:</b> l’índex assigna el mateix pes a ambdues dimensions per reflectir que totes dues formen part del repte ODS 7.
+        <b>Idea clau:</b> l’índex resumeix en una sola lectura el progrés “amb garanties” i fa visible la bretxa que encara separa el món del 100%.
       </p>
     </div>
 
     <div class="frame">
       <iframe class="h-auditori" src="visuals/seccio2_auditori_mundial.html" loading="lazy"
-              title="Secció 2 — Pictograma índex ODS 7 (mostra de 100)"></iframe>
+              title="Secció 2 — Pictograma: Índex ODS 7 (%)"></iframe>
     </div>
+    <p class="caption">
+      Índex ODS 7 (%) en una mostra de 100 icones: en groc, part coberta; en gris, part pendent (fins al 100%) (últim any disponible).
+    </p>
   </section>
 
   <!-- SECCIÓ 3 -->
   <section>
-    <h2>Desigualtats territorials</h2>
-    <p class="chart-subtitle">
-      Evolució de l’Índex ODS 7 per país (2000–2023): identificació de concentracions regionals de dèficit
-    </p>
+    <h2>3) On es concentra el dèficit d’accés a l’energia</h2>
     <p class="lead">
-      La mitjana mundial pot ocultar patrons territorials. El mapa animat permet observar l’evolució país a país i detectar
-      si els valors baixos es concentren en regions concretes i persisteixen al llarg del temps.
+      La mitjana mundial pot ocultar grans desigualtats. El mapa animat permet observar l’evolució de l’<b>Índex ODS 7 (%)</b> per país
+      i identificar on es manté el dèficit al llarg del temps.
     </p>
 
     <div class="narrative">
       <h3>Lectura</h3>
       <p>
-        El mapa mostra una distribució desigual del progrés: mentre molts països s’acosten als valors alts de l’índex,
-        els valors més baixos es mantenen <b>concentrats en regions determinades</b>.
+        El progrés no és homogeni: molts països convergeixen cap a valors alts, però els valors baixos persisteixen en regions concretes.
       </p>
       <p class="insight">
         <b>Idea clau:</b> el dèficit és especialment persistent a l’<b>Àfrica subsahariana</b>, fet que apunta a barreres estructurals
-        (infraestructura, capacitat d’inversió, accés a solucions modernes de cuina, etc.) i reforça la necessitat d’intervencions focalitzades.
+        (infraestructura, capacitat d’inversió i adopció de solucions modernes de cuina, entre d’altres).
       </p>
     </div>
 
     <div class="frame">
       <iframe class="h-mapa" src="visuals/seccio3_mapa_ods7_index_animat.html" loading="lazy"
-              title="Secció 3 — Mapa animat índex ODS 7"></iframe>
+              title="Secció 3 — Mapa animat: Índex ODS 7 (%) per país"></iframe>
     </div>
+    <p class="caption">
+      Evolució de l’Índex ODS 7 (%) per país (2000–2023): concentració territorial i persistència del dèficit.
+    </p>
   </section>
 
   <!-- SECCIÓ 4 -->
   <section>
-    <h2>Magnitud del repte el 2023</h2>
-    <p class="chart-subtitle">
-      Classificació de països segons grau d’assoliment a l’últim any disponible (llindar “lluny”: <b>&lt; 90%</b> de cobertura)
-    </p>
+    <h2>4) Magnitud del repte pendent</h2>
     <p class="lead">
-      Per passar de la dinàmica temporal a una fotografia final, es classifiquen els països segons si estan a prop d’assolir
-      l’accés universal o si continuen clarament lluny de l’objectiu.
+      Per tancar el diagnòstic, fem una fotografia de l’últim any disponible: quants països estan a prop d’assolir l’objectiu
+      i quants continuen clarament lluny.
     </p>
 
     <div class="narrative">
       <h3>Lectura</h3>
       <p>
-        Definint com a “lluny de l’objectiu” els països amb una cobertura inferior al <b>90%</b> (segons l’índex ODS 7),
-        el resultat mostra que el repte és quantitativament important.
-      </p>
-      <p class="kpi">
-        <b>Any 2023:</b> aproximadament <b>41.8%</b> dels països es mantenen <b>lluny de l’objectiu</b>, mentre que <b>58.2%</b> estan
-        a prop o pràcticament assolits.
+        Es considera que un país està “lluny de l’objectiu” quan el seu <b>Índex ODS 7 (%)</b> és inferior al <b>90%</b>.
       </p>
       <p class="insight">
-        <b>Idea clau:</b> no es tracta d’un “tram final” minoritari: una part molt significativa de països requereix una acceleració real
-        per convergir cap al 100% abans del 2030.
+        <b>Idea clau:</b> el repte no és minoritari: aproximadament un <b>40%</b> dels països es mantenen per sota del 90%,
+        i per tant requereixen una acceleració real per convergir cap al 100% abans del 2030.
       </p>
     </div>
 
     <div class="frame">
       <iframe class="h-donut" src="visuals/seccio4_paisos_lluny_ods7.html" loading="lazy"
-              title="Secció 4 — Països lluny de l'ODS 7"></iframe>
+              title="Secció 4 — Països lluny de l'objectiu (llindar 90%)"></iframe>
     </div>
+    <p class="caption">
+      Classificació de països segons grau d’assoliment (últim any disponible): “lluny” si Índex ODS 7 (%) &lt; 90%.
+    </p>
   </section>
 
   <!-- SECCIÓ 5 -->
   <section>
-    <h2>ODS 7 i desenvolupament econòmic</h2>
-    <p class="chart-subtitle">
-      Relació entre l’Índex ODS 7 i el PIB per càpita: densitat de països segons renda i assoliment
-    </p>
+    <h2>5) ODS 7 i desenvolupament econòmic</h2>
     <p class="lead">
-      Finalment, es contrasta el grau d’assoliment de l’ODS 7 amb el nivell de desenvolupament econòmic, utilitzant el PIB per càpita
-      com a proxy de capacitat d’inversió i accés a infraestructures i tecnologies modernes.
+      Finalment, es compara el grau d’assoliment amb el nivell de renda. La densitat de països mostra la relació entre
+      el <b>PIB per càpita</b> i l’<b>Índex ODS 7 (%)</b>.
     </p>
 
     <div class="narrative">
       <h3>Lectura</h3>
       <p>
-        La visualització mostra un patró clar: a mesura que augmenta el <b>PIB per càpita</b>, l’<b>Índex ODS 7</b> tendeix a situar-se
-        en valors més elevats, amb una concentració de països de renda alta a la zona superior (índex proper al 100%).
+        El patró és clar: a mesura que augmenta el PIB per càpita, els països tendeixen a situar-se en valors més elevats de l’Índex ODS 7 (%).
       </p>
       <p class="insight">
-        <b>Idea clau:</b> l’Índex ODS 7 està <b>directament relacionat amb el PIB</b>. Això reforça que el retard no és només tecnològic,
-        sinó també estructural: la renda condiciona la capacitat d’estendre infraestructures, electrificació de qualitat i alternatives de cuina netes i segures.
+        <b>Idea clau:</b> l’Índex ODS 7 està fortament relacionat amb la capacitat econòmica. Això reforça que el retard és,
+        en bona part, un repte estructural de desigualtat i finançament (infraestructura i accés a alternatives modernes i segures).
       </p>
     </div>
 
     <div class="frame">
-      <iframe class="h-scatter"
-              src="visuals/seccio5_ods7_vs_gdp_hexbin.html"
+      <iframe class="h-scatter" src="visuals/seccio5_ods7_vs_gdp_hexbin.html"
               loading="lazy"
-              title="Secció 5 — Índex ODS 7 vs PIB per càpita (hexbin)">
+              title="Secció 5 — Índex ODS 7 (%) vs PIB per càpita (densitat)">
       </iframe>
     </div>
+    <p class="caption">
+      Relació entre l’Índex ODS 7 (%) i el PIB per càpita: densitat de països segons renda i grau d’assoliment (últim any disponible).
+    </p>
   </section>
 
   <footer>
-    <div>
-      <b>Fonts:</b> Nacions Unides (ODS 7) i Our World in Data.
-    </div>
-    <div>
-      <b>Publicació:</b> GitHub Pages · Repositori: annahmarsal / PRACT-visualitzacions
-    </div>
+    <div><b>Autoria:</b> Anna Hernández Marsal</div>
+    <div><b>Fonts:</b> Nacions Unides (ODS 7) i Our World in Data.</div>
+    <div><b>Publicació:</b> GitHub Pages · Repositori: annahmarsal / PRACT-visualitzacions</div>
     <div class="note">
-      Les visualitzacions s’han integrat en un relat únic: cada secció aporta context, lectura i una idea clau vinculada a la pregunta central
-      sobre l’assoliment de l’ODS 7 a 7 anys del 2030.
+      Nota: l’<b>Índex ODS 7 (%)</b> és un indicador derivat per a aquesta pràctica per sintetitzar, en una sola mesura,
+      l’accés a l’electricitat i l’accés a combustibles i tecnologies netes i segures per cuinar.
     </div>
   </footer>
+
 </main>
 </body>
 </html>
